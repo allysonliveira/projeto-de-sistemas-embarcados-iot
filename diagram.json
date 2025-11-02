@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "author": "Gemini",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -150, "left": -50, "attrs": {} },
+    { "type": "wokwi-w5500-ethernet", "id": "eth1", "top": -50, "left": -180, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "res1",
+      "top": -101.65,
+      "left": 124.8,
+      "rotate": 90,
+      "attrs": { "value": "4700" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "res2",
+      "top": -81.6,
+      "left": 172.25,
+      "rotate": 90,
+      "attrs": { "value": "4700" }
+    },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": 243.14,
+      "left": -76.57,
+      "attrs": { "i2cAddress": "0x3c" }
+    }
+  ],
+  "connections": [
+    [ "uno:7", "dht1:SDA", "green", [] ],
+    [ "uno:GND", "dht1:GND", "black", [] ],
+    [ "uno:5V", "dht1:VCC", "red", [] ],
+    [ "eth1:GND", "uno:GND", "black", [] ],
+    [ "eth1:VCC", "uno:5V", "red", [] ],
+    [ "eth1:MISO", "uno:12", "orange", [] ],
+    [ "eth1:MOSI", "uno:11", "purple", [] ],
+    [ "eth1:SCK", "uno:13", "yellow", [] ],
+    [ "eth1:CS", "uno:10", "magenta", [] ],
+    [ "eth1:INT", "uno:2", "grey", [] ],
+    [ "eth1:RST", "uno:9", "grey", [] ],
+    [ "res1:1", "uno:A4", "green", [] ],
+    [ "res1:2", "uno:5V", "red", [] ],
+    [ "res2:1", "uno:A5", "blue", [] ],
+    [ "res2:2", "uno:5V", "red", [] ],
+    [ "dht1:GND", "uno:GND.1", "black", [ "v0" ] ],
+    [ "oled1:GND", "uno:GND.2", "black", [ "v-28.8", "h211.2", "v-28.8" ] ],
+    [ "oled1:SDA", "uno:A4", "green", [ "v-9.6", "h220.87" ] ],
+    [ "oled1:SCL", "uno:A5", "green", [ "v-19.2", "h278.7", "v-9.6" ] ],
+    [ "oled1:VCC", "uno:5V", "red", [ "v-38.4", "h182.55" ] ]
+  ],
+  "dependencies": {}
+}
