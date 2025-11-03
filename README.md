@@ -1,6 +1,6 @@
 # Projeto IoT - Sistemas Embarcados - Engenharia de Computação - UFRN 
 
-Este projeto é um trabalho individual para a disciplina DCA3706 - Sistemas Embarcados, da Universidade Federal do Rio Grande do Norte (UFRN), ministrada pelo Prof. Micael Balza.
+Trabalho referente a disciplina DCA3706 - Sistemas Embarcados, Universidade Federal do Rio Grande do Norte (UFRN).
 
 ## 1. Objetivo do Projeto
 
